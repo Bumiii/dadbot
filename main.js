@@ -11,4 +11,15 @@ client.events = new Discord.Collection();
     require(`./handlers/${handler}`)(client, Discord);
 });
 
+client.on('ready', () => {
+    client.user.setPresence({
+        status: 'available',     //sets status button to green   
+        activity: {
+            name: `being Dad on ${client.guilds.cache.size} servers`,    //This is the custom text  
+            type: 'PLAYING'     //this is the type (duh). 'watching' would also be an option  
+        }
+        
+    });
+});
+
 client.login(process.env.DISCORD_TOKEN);
