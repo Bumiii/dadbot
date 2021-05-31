@@ -5,9 +5,9 @@ module.exports = {
     description: "messages people",
     async execute(client, message, args, Discord) {
         setTimeout(function () {
-        //     message.channel.send("Oh")
-        // }, 500)
-        // setTimeout(function () {
+            message.channel.send("Oh")
+        }, 500)
+        setTimeout(function () {
             target = message.mentions.users.first();
             text = message.content.split("> ");
             user = message.author.username;
