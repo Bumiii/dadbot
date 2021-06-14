@@ -1,7 +1,7 @@
 module.exports = (Discord, client, message) => {
 
     if (message.author.bot || message.channel.type === 'dm') {
-        message.author.send("Sorry sonny I Don't talk in dms");
+        message.author.send("Sorry sonny I don't talk in dms");
         return;
     }
     
